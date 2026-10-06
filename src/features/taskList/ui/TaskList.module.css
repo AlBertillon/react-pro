@@ -1,0 +1,31 @@
+.container {
+  max-width: 480px;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.removeBtn {
+  flex-shrink: 0;
+  padding: 10px 15px;
+  border: 1px solid #e53e3e;
+  border-radius: 4px;
+  background: #fff;
+  color: #e53e3e;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.removeBtn:hover {
+  background: #e53e3e;
+  color: #fff;
+}
