@@ -1,11 +1,13 @@
+import { memo, useEffect } from "react";
+
 import styles from "./TaslCard.module.css";
 
-interface TaskCardProps {
+export interface TaskCardProps {
   title: string;
   completed: boolean;
 }
 
-export function TaskCard({ title, completed }: TaskCardProps) {
+export const TaskCard = memo(({ title, completed }: TaskCardProps) => {
   return (
     <div className={styles.card}>
       <div
@@ -17,4 +19,4 @@ export function TaskCard({ title, completed }: TaskCardProps) {
       </span>
     </div>
   );
-}
+});
