@@ -11,7 +11,7 @@ export interface TaskListProps {
   tasks: Task[];
   filter: Filter;
   onFilterChange: (filter: Filter) => void;
-  onRemoveTask: (id: string) => void;
+  onRemoveTask?: (id: number) => void;
 }
 
 export const TaskList = memo(
@@ -24,12 +24,14 @@ export const TaskList = memo(
           {tasks.map((task) => (
             <div key={task.id} className={styles.item}>
               <TaskCard title={task.title} completed={task.completed} />
-              <button
-                className={styles.removeBtn}
-                onClick={() => onRemoveTask(task.id)}
-              >
-                Удалить
-              </button>
+              {onRemoveTask && (
+                <button
+                  className={styles.removeBtn}
+                  onClick={() => onRemoveTask(task.id)}
+                >
+                  Удалить
+                </button>
+              )}
             </div>
           ))}
         </div>

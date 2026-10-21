@@ -1,37 +1,72 @@
+import js from "@eslint/js";
+import tsParser from "@typescript-eslint/parser";
+import prettier from "eslint-config-prettier";
+import boundaries from "eslint-plugin-boundaries";
 import importPlugin from "eslint-plugin-import";
-import prettierPlugin from "eslint-plugin-prettier/recommended";
-import plugin, { parser } from "typescript-eslint";
+import jsxA11y from "eslint-plugin-jsx-a11y";
+import react from "eslint-plugin-react";
+import reactHooks from "eslint-plugin-react-hooks";
 
 export default [
-  { ignores: ["node_modules/", "dist/", "dist-ssr/", "coverage/"] },
-  prettierPlugin,
+  js.configs.recommended,
+  prettier,
+
   {
-    files: ["**/*.{ts,tsx}"],
+    files: ["**/*.{js,jsx,ts,tsx}"],
+
     languageOptions: {
-      parser,
-    },
-    plugins: {
-      "@typescript-eslint": plugin,
-      import: importPlugin,
-    },
-    rules: {
-      ...plugin.configs.recommendedTypeChecked.rules,
-      "prettier/prettier": "error",
-      "import/order": "warn",
-      "import/no-unresolved": "off",
-      "import/named": "off",
-      "import/namespace": "off",
-      "@typescript-eslint/consistent-type-imports": "off",
-    },
-  },
-  {
-    files: ["**/*.{ts,tsx}"],
-    settings: {
-      "import/resolver": {
-        typescript: {
-          project: "./tsconfig.app.json",
-        },
+      parser: tsParser,
+      ecmaVersion: 2020,
+      sourceType: "module",
+      parserOptions: {
+        project: "./tsconfig.json",
       },
+    },
+
+    plugins: {
+      react,
+      "react-hooks": reactHooks,
+      "jsx-a11y": jsxA11y,
+      import: importPlugin,
+      boundaries,
+    },
+
+    settings: {
+      react: {
+        version: "detect",
+      },
+
+      "boundaries/elements": [
+        { type: "shared", pattern: "src/shared/*" },
+        { type: "entities", pattern: "src/entities/*" },
+        { type: "features", pattern: "src/features/*" },
+        { type: "widgets", pattern: "src/widgets/*" },
+        { type: "pages", pattern: "src/pages/*" },
+        { type: "app", pattern: "src/app/*" },
+      ],
+    },
+
+    rules: {
+      ...react.configs.recommended.rules,
+      ...reactHooks.configs.recommended.rules,
+      ...jsxA11y.configs.recommended.rules,
+      ...importPlugin.configs.recommended.rules,
+
+      "boundaries/element-types": [
+        "error",
+        {
+          default: "disallow",
+          rules: [
+            { from: "features", allow: ["shared", "entities"] },
+            { from: "entities", allow: ["shared"] },
+            { from: "widgets", allow: ["shared", "features", "entities"] },
+            {
+              from: "pages",
+              allow: ["widgets", "features", "entities", "shared"],
+            },
+          ],
+        },
+      ],
     },
   },
 ];
