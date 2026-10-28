@@ -1,25 +1,14 @@
 import { Suspense, lazy } from "react";
 import { createBrowserRouter } from "react-router-dom";
 
-import { TaskPage } from "pages/tasks";
-import { ProtectedRoute } from "shared/ui/ProtectedRoute";
-
-const RegisterPage = lazy(() => import("pages/register"));
+const RefExamplesPage = lazy(() => import("pages/refExamples"));
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: (
-      <ProtectedRoute>
-        <TaskPage />
-      </ProtectedRoute>
-    ),
-  },
-  {
-    path: "/register",
-    element: (
       <Suspense fallback={<div>Loading...</div>}>
-        <RegisterPage />
+        <RefExamplesPage />
       </Suspense>
     ),
   },

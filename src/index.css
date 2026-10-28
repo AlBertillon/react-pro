@@ -34,10 +34,13 @@ body {
 }
 
 #root {
-  max-width: 480px;
-  margin: 0 auto;
   min-height: 100svh;
-  padding: 2rem 1rem;
+}
+
+#root:has(> .page-full-width) {
+  max-width: none;
+  margin: 0;
+  padding: 0;
 }
 
 h1 {
