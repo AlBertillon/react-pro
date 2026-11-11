@@ -1,21 +1,10 @@
-import { Suspense, lazy } from "react";
 import { createBrowserRouter } from "react-router-dom";
 
-const RefExamplesPage = lazy(() => import("pages/refExamples"));
+import { authRoutes } from "features/authRouting/AppRouter";
+
 
 const router = createBrowserRouter([
-  {
-    path: "/",
-    element: (
-      <Suspense fallback={<div>Loading...</div>}>
-        <RefExamplesPage />
-      </Suspense>
-    ),
-  },
-  {
-    path: "*",
-    element: <div>Not Found</div>,
-  },
+  ...authRoutes,
 ]);
 
 export default router;
