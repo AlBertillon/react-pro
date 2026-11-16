@@ -1,0 +1,28 @@
+.favorite-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  color: #666;
+  transition: color 0.2s;
+}
+
+.favorite-button--absolute {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 1;
+}
+
+.favorite-button:hover {
+  color: #e53e3e;
+}
+
+.favorite-button--active {
+  color: #e53e3e;
+}
+
+.favorite-button__icon {
+  width: 20px;
+  height: 20px;
+}

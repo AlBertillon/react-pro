@@ -1,0 +1,234 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem 1.5rem;
+  background: var(--bg-raised);
+  border-bottom: 1px solid var(--border);
+}
+
+.header__logo {
+  width: 40px;
+  height: 40px;
+}
+
+.header__title {
+  font-weight: 600;
+  font-size: 1.125rem;
+  margin: 0;
+}
+
+.header .button {
+  margin-left: auto;
+  transition: transform 0.15s ease;
+}
+
+.header .button-primary:hover {
+  transform: scale(1.05);
+}
+
+.header__auth-buttons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.header__actions {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.header__link {
+  color: var(--text);
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-weight: 500;
+  padding: 0.4rem 0.5rem;
+  border-radius: var(--radius);
+  transition: background-color 0.15s;
+  white-space: nowrap;
+}
+
+.header__link:hover {
+  background: var(--bg);
+}
+
+.header__create {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.4rem 0.75rem;
+  border-radius: var(--radius);
+  background: var(--accent);
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.8rem;
+  font-weight: 600;
+  transition: opacity 0.15s;
+  white-space: nowrap;
+}
+
+.header__create:hover {
+  opacity: 0.85;
+}
+
+.header__favorites {
+  position: relative;
+  width: 36px;
+  height: 36px;
+  border: none;
+  border-radius: var(--radius);
+  background: transparent;
+  color: var(--text-muted);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.15s, color 0.15s;
+  text-decoration: none;
+}
+
+.header__favorites:hover {
+  background: var(--bg);
+  color: var(--text);
+}
+
+.header__favorites svg {
+  width: 20px;
+  height: 20px;
+}
+
+.header__favorites-badge {
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  min-width: 18px;
+  height: 18px;
+  padding: 0 4px;
+  border-radius: 9px;
+  background: #dc2626;
+  color: #fff;
+  font-size: 0.625rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header__cart {
+  position: relative;
+  width: 36px;
+  height: 36px;
+  border: none;
+  border-radius: var(--radius);
+  background: transparent;
+  color: var(--text-muted);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.15s, color 0.15s;
+  text-decoration: none;
+}
+
+.header__cart:hover {
+  background: var(--bg);
+  color: var(--text);
+}
+
+.header__cart svg {
+  width: 20px;
+  height: 20px;
+}
+
+.header__cart-badge {
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  min-width: 18px;
+  height: 18px;
+  padding: 0 4px;
+  border-radius: 9px;
+  background: #dc2626;
+  color: #fff;
+  font-size: 0.625rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header__purchased {
+  position: relative;
+  width: 36px;
+  height: 36px;
+  border: none;
+  border-radius: var(--radius);
+  background: transparent;
+  color: var(--text-muted);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.15s, color 0.15s;
+  text-decoration: none;
+  font-size: 1.25rem;
+}
+
+.header__purchased:hover {
+  background: var(--bg);
+  color: var(--text);
+}
+
+.header__purchased-badge {
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  min-width: 18px;
+  height: 18px;
+  padding: 0 4px;
+  border-radius: 9px;
+  background: #dc2626;
+  color: #fff;
+  font-size: 0.625rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header__user {
+  color: var(--text-muted);
+  font-size: 0.875rem;
+}
+
+.header__avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius);
+  background: transparent;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.15s;
+  text-decoration: none;
+}
+
+.header__avatar:hover {
+  background: var(--bg);
+}
+
+.header__avatar-img {
+  width: 24px;
+  height: 24px;
+  color: var(--text-muted);
+  transition: color 0.15s;
+}
+
+.header__avatar:hover .header__avatar-img {
+  color: var(--text);
+}

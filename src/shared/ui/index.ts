@@ -1,0 +1,13 @@
+export { default as Button } from "./Button";
+export { default as CartIcon } from "./CartIcon";
+export { default as Counter } from "./Counter";
+export { default as DiscountBadge } from "./DiscountBadge/DiscountBadge";
+export { default as Footer } from "./Footer/Footer";
+export { default as HeartIcon } from "./HeartIcon";
+export { default as Input } from "./Input";
+export { default as Loader } from "./Loader";
+export { default as Modal } from "./Modal/Modal";
+export { default as Pagination } from "./Pagination";
+export { default as Portal } from "./Portal";
+export { default as ProductReviews } from "./ProductReviews/ProductReviews";
+export { default as PurchasedIcon } from "./PurchasedIcon";

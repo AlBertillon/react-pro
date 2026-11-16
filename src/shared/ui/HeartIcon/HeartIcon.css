@@ -1,0 +1,8 @@
+.heart-icon {
+  color: var(--text-muted);
+  transition: color 0.15s;
+}
+
+.heart-icon:hover {
+  color: var(--accent);
+}

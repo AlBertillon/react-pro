@@ -31,10 +31,13 @@ body {
   font-size: 16px;
   color: var(--text);
   background: var(--bg);
+  height: 100%;
 }
 
 #root {
-  min-height: 100svh;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 #root:has(> .page-full-width) {
