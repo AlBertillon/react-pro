@@ -1,0 +1,168 @@
+.product-card {
+  position: relative;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: box-shadow 0.2s;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  cursor: pointer;
+  user-select: none;
+}
+
+.product-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.product-card__image {
+  height: 200px;
+  max-height: 200px;
+  min-width: 200px;
+}
+
+.product-card__image_conteiner {
+  display: flex;
+  justify-content: center;
+}
+
+.product-card__body {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex: 1;
+}
+
+.product-card__category {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+}
+
+.product-card__title {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.product-card__description {
+  margin: 0;
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+
+.product-card__footer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  margin-top: auto;
+}
+
+.product-card__price_container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.product-card__price {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.product-card__old-price {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  text-decoration: line-through;
+}
+
+.product-card__current-price {
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+
+.product-card__stock {
+  font-size: 0.75rem;
+  color: #16a34a;
+  margin-top: 0.125rem;
+}
+
+.product-card__stock--low {
+  color: #ea580c;
+}
+
+.product-card__actions {
+  padding-top: 0.75rem;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.product-card__btn {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--accent);
+  border-radius: var(--radius);
+  background: transparent;
+  color: var(--accent);
+  font: inherit;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.15s, color 0.15s;
+}
+
+.product-card__btn:hover:not(:disabled) {
+  background: var(--accent);
+  color: #fff;
+}
+
+.product-card__btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.product-card__counter {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.product-card__counter-btn {
+  width: 32px;
+  height: 32px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--bg-raised);
+  color: var(--text);
+  font-size: 1.125rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.15s, border-color 0.15s;
+}
+
+.product-card__counter-btn:hover {
+  border-color: var(--accent);
+  background: var(--accent);
+  color: #fff;
+}
+
+.product-card__counter-value {
+  min-width: 24px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.product-card__purchased {
+  display: block;
+  text-align: center;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--accent);
+  border-radius: var(--radius);
+  background: var(--accent);
+  color: #fff;
+  font-weight: 500;
+  cursor: default;
+}

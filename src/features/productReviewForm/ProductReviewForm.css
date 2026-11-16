@@ -1,0 +1,54 @@
+.product-review-form {
+  margin-top: 1.5rem;
+  padding: 1.25rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--bg-secondary);
+}
+
+.product-review-form__title {
+  margin: 0 0 0.75rem;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.product-review-form__rating {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.product-review-form__label {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+}
+
+.product-review-form__field {
+  margin-bottom: 0.75rem;
+}
+
+.product-review-form__input {
+  width: 100%;
+  min-height: 80px;
+  resize: vertical;
+  font-family: inherit;
+  font-size: 0.875rem;
+  padding: 0.5rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--bg);
+  color: var(--text);
+}
+
+.product-review-form__input:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 2px color-mix(in srgb, var(--accent) 20%, transparent);
+}
+
+.product-review-form__error {
+  margin: 0 0 0.75rem;
+  font-size: 0.8rem;
+  color: #ef4444;
+}

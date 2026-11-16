@@ -1,0 +1,36 @@
+.filters {
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.filters__input,
+.filters__select {
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: calc(var(--radius) - 2px);
+  font: inherit;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.filters__input:focus,
+.filters__select:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 2px color-mix(in srgb, var(--accent) 20%, transparent);
+}
+
+.filters__row {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.filters__row .filters__input {
+  flex: 1;
+}
+
+.filters__select {
+  flex: 1;
+}

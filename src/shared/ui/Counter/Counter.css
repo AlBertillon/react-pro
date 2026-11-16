@@ -1,0 +1,49 @@
+.counter {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.counter__button {
+  width: 32px;
+  height: 32px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--bg-raised);
+  color: var(--text);
+  font-size: 1.125rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.15s, border-color 0.15s;
+}
+
+.counter__button:hover:not(:disabled) {
+  border-color: var(--accent);
+  background: var(--accent);
+  color: #fff;
+}
+
+.counter__button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.counter__value-wrapper {
+  display: flex;
+  align-items: baseline;
+  gap: 0.125rem;
+}
+
+.counter__value {
+  min-width: 24px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.counter__max {
+  font-size: 0.75rem;
+  color: var(--text-secondary, #888);
+  font-weight: 400;
+}
